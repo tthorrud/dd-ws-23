@@ -1,0 +1,30 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+
+import Header from '../../components/Header.astro';
+
+
+---
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <BaseHead title={"heiuh"} description={"oihs"} />
+    </head>
+
+    <Header />
+    <style>
+        nav {
+            background-color: blue;
+        }
+        a {
+            padding-right: 10px;
+            color: yellow
+        }
+    </style>
+    <nav>
+        <a href="/">Hjem</a>
+        <a href="/fish/laks">Laks</a>
+        <a href="/fish/torsk">Torsk</a>
+    </nav>
+</html>

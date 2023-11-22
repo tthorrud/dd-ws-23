@@ -8,11 +8,12 @@ import FormattedDate from '../components/FormattedDate.astro';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+console.log("TITLE", title)
 ---
 
 <html lang="en">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={`${title} SIGMUND`} description={description} />
 		<style>
 			main {
 				width: calc(100% - 2em);
@@ -27,7 +28,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 				margin: 0 auto;
 				border-radius: 12px;
 				box-shadow: var(--box-shadow);
-			}
+			}	
 			.prose {
 				width: 720px;
 				max-width: calc(100% - 2em);
@@ -73,7 +74,7 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 								)
 							}
 						</div>
-						<h1>{title}</h1>
+						<h1>{title} SIGMUND</h1>
 						<hr />
 					</div>
 					<slot />

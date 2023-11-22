@@ -1,0 +1,36 @@
+---
+// import News from '../../layouts/Fish.astro';
+import * as laks from '../../content/fish/laks.md'
+import * as torsk from '../../content/fish/torsk.md'
+import BaseHead from '../../components/BaseHead.astro';
+
+import Header from '../../components/Header.astro';
+
+export async function getStaticPaths() {
+	return [
+		{params: {fish: "laks"}, props: laks},
+		{params: {fish: "torsk"}, props: torsk}
+	]
+}
+const { Content } = Astro.props
+
+const { fish } = Astro.params;
+
+---
+<html>
+	<head>
+	<meta charset="utf-8" />
+	<BaseHead title={"heiuh"} description={"oihs"} />
+
+	</head>
+    <Header />
+
+
+	<div>Good dog, {fish}!
+		<div class="pt-5 bg-pink-500">
+			<Content />
+	
+		</div>
+	</div>
+</html>
+
